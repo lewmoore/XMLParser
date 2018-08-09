@@ -33,11 +33,7 @@ namespace ReportingXML
 
             XmlNode node = root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='SAO']/udc:Identifier", nsmgr);
-            if (node != null) {
-                return node.InnerXml;
-            } else {
-                return "Error in Node";
-            }
+             return returnNode(node.InnerXml);
         }
 
         public object getChildOrderID(){
@@ -50,11 +46,7 @@ namespace ReportingXML
 
             XmlNode node = root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='DOR']/udc:Identifier", nsmgr);
-            if (node != null) {
-                return node.InnerXml;
-            } else {
-                return "Error in Node";
-            }
+            return returnNode(node.InnerXml);
         }
 
         public object getOrderVolume(){
@@ -66,8 +58,12 @@ namespace ReportingXML
 
             XmlNode node = root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/dp:OrderQuantity/dp:RequestedQuantity", nsmgr);
+            return returnNode(node.InnerXml);
+        }
+
+        public object returnNode(object node){
             if (node != null) {
-                return node.InnerXml;
+                return node;
             } else {
                 return "Error in Node";
             }
