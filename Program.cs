@@ -13,6 +13,11 @@ namespace ReportingXML
         private string udct = "urn:rosettanet:specification:universal:DocumentType:xsd:codelist:01.13";
         private string tns = "urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05";
         private string dp = "urn:rosettanet:specification:domain:Procurement:xsd:schema:02.29";
+        XmlDocument doc = new XmlDocument();
+        private string documentPath = "/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml";
+
+          
+        
 
         static void Main(string[] args){
             var xml = new Program();
@@ -22,11 +27,9 @@ namespace ReportingXML
         }
 
         public object getPurchaseOrder(){
-           XmlDocument doc = new XmlDocument();
-            doc.Load("/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml");
+            doc.Load(documentPath);
             XmlNode root = doc.DocumentElement;
-
-            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
             nsmgr.AddNamespace("udc", udc); 
             nsmgr.AddNamespace("udct", udct);
             nsmgr.AddNamespace("tns", tns);
@@ -41,11 +44,9 @@ namespace ReportingXML
         }
 
         public object getChildOrderID(){
-            XmlDocument doc = new XmlDocument();
-            doc.Load("/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml");
+            doc.Load(documentPath);
             XmlNode root = doc.DocumentElement;
-
-            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);
             nsmgr.AddNamespace("udc", udc); 
             nsmgr.AddNamespace("udct", udct);
             nsmgr.AddNamespace("tns", tns);
@@ -60,11 +61,9 @@ namespace ReportingXML
         }
 
         public object getOrderVolume(){
-            XmlDocument doc = new XmlDocument();
-            doc.Load("/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml");
+            doc.Load(documentPath);
             XmlNode root = doc.DocumentElement;
-
-            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable);  
+            XmlNamespaceManager nsmgr = new XmlNamespaceManager(doc.NameTable); 
             nsmgr.AddNamespace("tns", tns);
             nsmgr.AddNamespace("dp", dp);
 
