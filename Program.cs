@@ -13,12 +13,9 @@ namespace ReportingXML
         private string udct = "urn:rosettanet:specification:universal:DocumentType:xsd:codelist:01.13";
         private string tns = "urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05";
         private string dp = "urn:rosettanet:specification:domain:Procurement:xsd:schema:02.29";
-        XmlDocument doc = new XmlDocument();
         private string documentPath = "/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml";
-
-          
+        XmlDocument doc = new XmlDocument();
         
-
         static void Main(string[] args){
             var xml = new Program();
             Console.WriteLine(xml.getPurchaseOrder());
