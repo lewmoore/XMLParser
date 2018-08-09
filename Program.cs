@@ -61,7 +61,7 @@ namespace ReportingXML
             return returnNode(node.InnerXml);
         }
 
-        public object returnNode(object node){
+        private object returnNode(object node){
             if (node != null) {
                 return node;
             } else {
