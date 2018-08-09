@@ -3,7 +3,7 @@ using System.Text;
 using System.IO;
 using System.Xml;
 
-namespace Telefonica
+namespace Telefonica.Parser
 {
     public class XmlDocumentParser
     {
@@ -19,14 +19,14 @@ namespace Telefonica
         {
             document.Load(documentPath);
             XmlNode Root = document.DocumentElement;
-            XmlNamespaceManager nsmgr = new XmlNamespaceManager(document.NameTable);
-            nsmgr.AddNamespace("udc", udc); 
-            nsmgr.AddNamespace("udct", udct);
-            nsmgr.AddNamespace("tns", tns);
+            XmlNamespaceManager Nsmgr = new XmlNamespaceManager(document.NameTable);
+            Nsmgr.AddNamespace("udc", udc); 
+            Nsmgr.AddNamespace("udct", udct);
+            Nsmgr.AddNamespace("tns", tns);
         }
         
         // This is a public property that can only be read and not set
         public XmlNode Root { private set; get; }
-        public XmlNode nsmgr {private set; get; }
+        public XmlNode Nsmgr {private set; get; }
     }
 }

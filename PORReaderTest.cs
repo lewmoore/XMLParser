@@ -1,15 +1,14 @@
 namespace Telefonica {
     using NUnit.Framework;
+    using Telefonica.Smip.Reader;
 
     [TestFixture]
     public class PORReaderTest {
         [Test]
         public void getPurchaseOrder(){
-            PORReader porreader = new PORReader(); 
 
-         Assert.AreEqual("aa036E31tc63qjPfIMJ", porreader.getPurchaseOrder());
+            PORReader reader = new PORReader("/Users/moorel/Desktop/Projects/C#/O2/DummyFiles/SupplyChainSourceFiles/POR/POR_SALES_8307_20180201164154.xml");
+            Assert.AreEqual(reader.getPurchaseOrder(), "aa036E31tc63qjPfIMJ");
         }
-
     }
-
 }
