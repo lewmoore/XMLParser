@@ -2,7 +2,7 @@
 using System.Text;
 using System.IO;
 using System.Xml;
-using Telefonica.Parser;
+using Telefonica;
 
 namespace Telefonica
 {
