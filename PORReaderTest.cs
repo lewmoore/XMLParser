@@ -1,5 +1,6 @@
 namespace Telefonica {
     using NUnit.Framework;
+    using Telefonica.Parser;
     using Telefonica.Smip.Reader;
 
     [TestFixture]
