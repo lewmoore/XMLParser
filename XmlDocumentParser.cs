@@ -13,6 +13,8 @@ namespace Telefonica
         public string udct = "urn:rosettanet:specification:universal:DocumentType:xsd:codelist:01.13";
         public string tns = "urn:rosettanet:specification:interchange:PurchaseOrderRequest:xsd:schema:02.05";
         public string dp = "urn:rosettanet:specification:domain:Procurement:xsd:schema:02.29";
+        public string updi = "urn:rosettanet:specification:universal:ProductIdentification:xsd:schema:01.04";
+        public string ulc = "urn:rosettanet:specification:universal:Locations:xsd:schema:01.04";
         
         //This is the constructor
         public XmlDocumentParser(string documentPath)
@@ -24,6 +26,8 @@ namespace Telefonica
             Nsmgr.AddNamespace("udct", udct);
             Nsmgr.AddNamespace("tns", tns);
             Nsmgr.AddNamespace("dp", dp);
+            Nsmgr.AddNamespace("updi", updi);
+            Nsmgr.AddNamespace("ulc", ulc);
         }
         
         // This is a public property that can only be read and not set

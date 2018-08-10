@@ -34,5 +34,11 @@ namespace Telefonica {
             return root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='DOR']/udc:DateTime", nsmgr).InnerXml;
         }
+
+        public object getVariantType(){
+            return root.SelectSingleNode(
+                "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/updi:ProductIdentification/ulc:AlternativeIdentifier/ulc:Identifier", nsmgr
+            ).InnerXml;
+        }
     }
 }
