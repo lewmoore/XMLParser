@@ -14,19 +14,10 @@ namespace Telefonica {
         nsmgr = xmlDocumentParser.Nsmgr;  
     }
 
-    public object getPurchaseOrder(){
+        public object getPurchaseOrder(){
 
-        XmlNode node = root.SelectSingleNode(
-                "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='SAO']/udc:Identifier", nsmgr);
-        return returnNode(node.InnerXml);
-    }
-
-        private object returnNode(object node){
-            if (node != null) {
-                return node;
-            } else {
-                return "Error in Node";
-            }
+            return root.SelectSingleNode(
+                    "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='SAO']/udc:Identifier", nsmgr).InnerXml;
         }
     }
 }
