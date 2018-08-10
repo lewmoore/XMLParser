@@ -14,7 +14,11 @@ namespace Telefonica {
         [Test]
         public void getChildOrder(){
             Assert.AreEqual(reader.getChildOrder(), "ORDER00054491-CONS1");
+        }
 
+        [Test]
+        public void getOrderVolume(){
+            Assert.AreEqual(reader.getOrderVolume(), "2.0");
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Telefonica
             Nsmgr.AddNamespace("udc", udc); 
             Nsmgr.AddNamespace("udct", udct);
             Nsmgr.AddNamespace("tns", tns);
+            Nsmgr.AddNamespace("dp", dp);
         }
         
         // This is a public property that can only be read and not set
