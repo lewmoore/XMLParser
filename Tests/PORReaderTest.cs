@@ -35,5 +35,10 @@ namespace Telefonica {
         public void getDeliveryDateTimeBegin(){
             Assert.AreEqual(reader.getDeliveryDateTimeBegin(), "2018-07-03T09:03:00Z");
         }
+
+        [Test]
+        public void getDeliveryDateTimeEnd(){
+            Assert.AreEqual(reader.getDeliveryDateTimeEnd(), "2018-07-03T09:13:00Z");
+        }
     }
 }

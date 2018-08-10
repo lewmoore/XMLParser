@@ -44,7 +44,12 @@ namespace Telefonica {
             return root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/tns:RequestedEvent/ud:DateTimePeriod/ud:Begin", nsmgr
             ).InnerXml;
+        }
 
+        public object getDeliveryDateTimeEnd(){
+            return root.SelectSingleNode(
+                "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/tns:RequestedEvent/ud:DateTimePeriod/ud:End", nsmgr
+            ).InnerXml;
         }
     }
 }
