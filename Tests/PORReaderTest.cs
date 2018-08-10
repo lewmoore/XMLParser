@@ -20,5 +20,10 @@ namespace Telefonica {
         public void getOrderVolume(){
             Assert.AreEqual(reader.getOrderVolume(), "2.0");
         }
+
+        [Test]
+        public void getOrderDateTime(){
+            Assert.AreEqual(reader.getOrderDateTime(), "2018-02-01T15:03:00Z");
+        }
     }
 }
