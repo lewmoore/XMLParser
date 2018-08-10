@@ -19,5 +19,10 @@ namespace Telefonica {
             return root.SelectSingleNode(
                     "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='SAO']/udc:Identifier", nsmgr).InnerXml;
         }
+
+        public object getChildOrder(){
+            return root.SelectSingleNode(
+                "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='DOR']/udc:Identifier", nsmgr).InnerXml;
+        }
     }
 }
