@@ -30,5 +30,10 @@ namespace Telefonica {
         public void getVariantType(){
             Assert.AreEqual(reader.getVariantType(), "1MESHUB001N");
         }
+
+        [Test]
+        public void getDeliveryDateTimeBegin(){
+            Assert.AreEqual(reader.getDeliveryDateTimeBegin(), "2018-07-03T09:03:00Z");
+        }
     }
 }

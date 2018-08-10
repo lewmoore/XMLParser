@@ -15,7 +15,6 @@ namespace Telefonica {
     }
 
         public object getPurchaseOrder(){
-
             return root.SelectSingleNode(
                     "descendant::tns:PurchaseOrder/udc:BusinessDocumentReference[udct:DocumentType='SAO']/udc:Identifier", nsmgr).InnerXml;
         }
@@ -39,6 +38,13 @@ namespace Telefonica {
             return root.SelectSingleNode(
                 "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/updi:ProductIdentification/ulc:AlternativeIdentifier/ulc:Identifier", nsmgr
             ).InnerXml;
+        }
+
+        public object getDeliveryDateTimeBegin(){
+            return root.SelectSingleNode(
+                "descendant::tns:PurchaseOrder/tns:OrderLineItem/tns:ProductLineItem/tns:RequestedEvent/ud:DateTimePeriod/ud:Begin", nsmgr
+            ).InnerXml;
+
         }
     }
 }
